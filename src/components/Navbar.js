@@ -33,12 +33,7 @@ export default function Navbar(props) {
               </Link>
             </li>
           </ul>
-          <form className="d-flex mx-2" role="search">
-            <input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
-            <button className="btn btn-primary" type="submit">
-              Search
-            </button>
-          </form>
+      
           <div className={`form-check form-switch text-${props.mode === 'light' ? 'dark' : 'light'}`}>
             <label className="form-check-label" htmlFor="flexSwitchCheckDefault">
               Enable DarkMode
