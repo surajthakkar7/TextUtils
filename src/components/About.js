@@ -1,6 +1,6 @@
 import React from 'react';
 
-const About = () => {
+const About = (props) => {
   const aboutPageStyles = `
     /* Custom CSS for the About Us page */
 
@@ -79,29 +79,33 @@ const About = () => {
       }
     }
   `;
+  let myStyle = {
+    color: props.mode ==='dark' ? 'white' : 'black',
+    backgroundColor : props.mode ==='dark' ? 'grey' : 'white',
+  }
 
   return (
-    <div className="container about-container">
-      <h1 className="about-heading">About Us</h1>
-      <p className="about-description">
+    <div className="container about-container" style={myStyle}>
+      <h1 className="about-heading" style={myStyle}>About Us</h1>
+      <p className="about-description" style={myStyle}>
         Welcome to TextUtils, your go-to tool for text manipulation. We're on a mission to simplify your text-related
         tasks and provide you with a seamless experience.
       </p>
       <div className="row">
         <div className="col-md-6">
-          <h2 className="about-subheading">Our Mission</h2>
-          <p className="about-mission">
+          <h2 className="about-subheading" style={myStyle}>Our Mission</h2>
+          <p className="about-mission" style={myStyle}>
             Our mission is to empower users by offering a user-friendly, efficient, and versatile text manipulation
             platform. We believe that working with text should be accessible to everyone, and we're committed to making
             it possible.
           </p>
         </div>
         <div className="col-md-6">
-          <h2 className="about-subheading">Meet the Team</h2>
+          <h2 className="about-subheading" style={myStyle}>Meet the Team</h2>
           <div className="about-team">
             <div className="team-member">
-              <h3 className="team-member-name">Suraj Thakkar</h3>
-              <p className="team-member-role">MERN Developer</p>
+              <h3 className="team-member-name" style={myStyle}>Suraj Thakkar</h3>
+              <p className="team-member-role" style={myStyle}>MERN Developer</p>
             </div>
         
           </div>
